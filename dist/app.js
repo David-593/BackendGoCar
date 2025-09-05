@@ -1,0 +1,19 @@
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+const express_1 = __importDefault(require("express"));
+const UsuarioRoute_1 = __importDefault(require("./routes/routeUsuario/UsuarioRoute"));
+const AuthRoute_1 = __importDefault(require("./routes/routeAuth/AuthRoute"));
+const AdminRoute_1 = __importDefault(require("./routes/routeAdmin/AdminRoute"));
+const app = (0, express_1.default)();
+const port = process.env.PORT;
+app.use(express_1.default.json());
+app.use("/api/users", UsuarioRoute_1.default);
+app.use("/api/auth", AuthRoute_1.default);
+app.use("/api/admin", AdminRoute_1.default);
+app.listen(port, () => {
+    console.log(`Server on port ${port}`);
+});
+//# sourceMappingURL=app.js.map
