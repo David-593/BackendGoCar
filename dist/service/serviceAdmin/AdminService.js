@@ -25,6 +25,17 @@ class AdminService {
         });
         return user;
     }
+    async findUserByCedula(cedula) {
+        return await prisma.usuario.findUnique({
+            where: { cedula },
+        });
+    }
+    async deleteUser(cedula) {
+        const user = await prisma.usuario.delete({
+            where: { cedula },
+        });
+        return user;
+    }
 }
 exports.AdminService = AdminService;
 //# sourceMappingURL=AdminService.js.map

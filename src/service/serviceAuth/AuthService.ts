@@ -47,7 +47,7 @@ export class AuthUserService {
             throw new Error("No hay contraseña configurada en el env")
         }
         const token = Jwt.sign(
-            { email: user.email, nombres: user.nombres, rol: user.rol },
+            { email: user.email, cedula: user.cedula, rol: user.rol },
             process.env.JWT_SECRET,
             { expiresIn: "1h" }
         );

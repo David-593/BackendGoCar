@@ -24,4 +24,19 @@ export class AdminService {
             });
             return user;
         }
+
+    // Buscar usuario por cédula    
+    async findUserByCedula(cedula: string) {
+        return await prisma.usuario.findUnique({
+            where: { cedula },
+        });
+    }   
+
+    // Eliminar usuario por cédula
+    async deleteUser(cedula: string) {
+        const user = await prisma.usuario.delete({
+            where: { cedula },
+        });
+        return user;
+    }
 }

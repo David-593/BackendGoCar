@@ -7,7 +7,7 @@ class UsuarioController {
     constructor() {
         this.updateUserByCedula = async (req, res) => {
             try {
-                const { cedula } = req.body;
+                const cedula = req.cedula;
                 const data = req.body;
                 const user = await userService.updateUserByCedula(cedula, data);
                 return res.json(user);

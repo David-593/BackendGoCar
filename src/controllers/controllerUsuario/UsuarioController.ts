@@ -7,7 +7,7 @@ const userService = new UsuarioService();
 export class UsuarioController {
   updateUserByCedula = async (req: Request, res: Response) => {
     try {
-      const { cedula } = req.body; 
+      const cedula = (req as any).cedula; 
       const data: Partial<CreateUserDto> = req.body; 
 
       const user = await userService.updateUserByCedula(cedula, data);

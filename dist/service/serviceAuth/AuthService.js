@@ -42,7 +42,7 @@ class AuthUserService {
         if (!process.env.JWT_SECRET) {
             throw new Error("No hay contraseña configurada en el env");
         }
-        const token = jsonwebtoken_1.default.sign({ email: user.email, nombres: user.nombres, rol: user.rol }, process.env.JWT_SECRET, { expiresIn: "1h" });
+        const token = jsonwebtoken_1.default.sign({ email: user.email, cedula: user.cedula, rol: user.rol }, process.env.JWT_SECRET, { expiresIn: "1h" });
         return { token, user };
     }
 }

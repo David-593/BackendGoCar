@@ -9,7 +9,8 @@ const authMiddleware = (req, res, next) => {
     try {
         const authHeader = req.headers["authorization"];
         if (!authHeader || !authHeader.startsWith("Bearer ")) {
-            return res.status(401).json({ message: "Acceso denegado. Token requerido" });
+            res.status(401).json({ message: "Acceso denegado. Token requerido" });
+            return;
         }
         const token = authHeader.split(" ")[1];
         const secret = process.env.JWT_SECRET;
@@ -17,11 +18,15 @@ const authMiddleware = (req, res, next) => {
             throw new Error("JWT_SECRET no está configurado en .env");
         }
         const decoded = jsonwebtoken_1.default.verify(token, secret);
+        req.cedula = decoded.cedula;
+        req.rol = decoded.rol;
         req.user = decoded;
+        console.log('AuthMiddleware - cedula:', req.cedula, 'rol:', req.rol, 'user:', req.user);
         next();
     }
     catch (error) {
-        return res.status(401).json({ message: "Token inválido o expirado" });
+        res.status(401).json({ message: "Token inválido o expirado" });
+        return;
     }
 };
 exports.authMiddleware = authMiddleware;
