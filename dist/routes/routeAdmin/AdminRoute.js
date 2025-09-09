@@ -8,10 +8,10 @@ const adminController = new AdminController_1.AdminController();
 router.post("/register", (0, RoleMiddleware_1.authorizeRoles)("admin"), async (req, res) => {
     await adminController.register(req, res);
 });
-router.get("/getUser", (0, RoleMiddleware_1.authorizeRoles)("admin"), async (req, res) => {
+router.post("/getUser", (0, RoleMiddleware_1.authorizeRoles)("admin"), async (req, res) => {
     await adminController.findUserByCedula(req, res);
 });
-router.delete("/deleteUser", (0, RoleMiddleware_1.authorizeRoles)("admin"), async (req, res) => {
+router.delete("/deleteUser/:cedula", (0, RoleMiddleware_1.authorizeRoles)("admin"), async (req, res) => {
     await adminController.deleteUser(req, res);
 });
 exports.default = router;

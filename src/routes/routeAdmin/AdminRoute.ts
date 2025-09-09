@@ -13,8 +13,8 @@ router.post("/getUser", authorizeRoles("admin"), async (req, res) => {
   await adminController.findUserByCedula(req, res);
 });
 
-// Ruta para eliminar usuario autenticado (admin)
-router.delete("/deleteUser", authorizeRoles("admin"), async (req, res) => {
+// Ruta para eliminar usuario por cédula (admin, usando parámetro en la URL)
+router.delete("/deleteUser/:cedula", authorizeRoles("admin"), async (req, res) => {
   await adminController.deleteUser(req, res);
 });
 export default router;

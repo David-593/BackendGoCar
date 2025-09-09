@@ -18,7 +18,7 @@ app.use((0, cors_1.default)({
 app.use(express_1.default.json());
 app.use("/api/users", AuthMiddleware_1.authMiddleware, UsuarioRoute_1.default);
 app.use("/api/auth", AuthRoute_1.default);
-app.use("/api/admin", AdminRoute_1.default);
+app.use("/api/admin", AuthMiddleware_1.authMiddleware, AdminRoute_1.default);
 app.listen(port, () => {
     console.log(`Server on port ${port}`);
 });

@@ -21,7 +21,6 @@ const authMiddleware = (req, res, next) => {
         req.cedula = decoded.cedula;
         req.rol = decoded.rol;
         req.user = decoded;
-        console.log('AuthMiddleware - cedula:', req.cedula, 'rol:', req.rol, 'user:', req.user);
         next();
     }
     catch (error) {

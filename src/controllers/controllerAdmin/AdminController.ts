@@ -43,7 +43,7 @@ export class AdminController {
 
     async deleteUser(req: Request, res: Response) {
         try {
-            const { cedula } = req.body;
+            const { cedula } = req.params;
             if (typeof cedula !== 'string') {
                 return res.status(400).json({ message: "Cédula inválida" });
             }

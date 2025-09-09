@@ -25,7 +25,7 @@ class AdminController {
     }
     async findUserByCedula(req, res) {
         try {
-            const { cedula } = req.query;
+            const { cedula } = req.body;
             if (typeof cedula !== 'string') {
                 return res.status(400).json({ message: "Cédula inválida" });
             }
