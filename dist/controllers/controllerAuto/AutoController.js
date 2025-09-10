@@ -9,7 +9,8 @@ class AutoController {
             const data = req.body;
             const file = req.file;
             if (file) {
-                data.imagenUrl = file.path;
+                const fileName = file.filename || file.path.split(/[/\\]/).pop();
+                data.imagenUrl = fileName;
             }
             const auto = await autoService.addAuto(data);
             res.status(201).json({ message: 'Auto agregado', auto });
@@ -20,7 +21,10 @@ class AutoController {
     }
     async findAutosByUsuario(req, res) {
         try {
-            const { cedula } = req.params;
+            const cedula = req.user?.cedula;
+            if (!cedula) {
+                return res.status(401).json({ message: 'No se encontró la cédula en el token' });
+            }
             const autos = await autoService.findAutosByUsuario(cedula);
             res.json(autos);
         }

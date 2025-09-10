@@ -30,7 +30,7 @@ __decorate([
     (0, class_validator_1.IsNumber)(),
     (0, class_validator_1.IsPositive)(),
     __metadata("design:type", Number)
-], CreateAutoDto.prototype, "a\u00F1o", void 0);
+], CreateAutoDto.prototype, "year", void 0);
 __decorate([
     (0, class_validator_1.IsNumber)(),
     (0, class_validator_1.IsPositive)(),

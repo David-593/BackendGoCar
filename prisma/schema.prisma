@@ -33,7 +33,7 @@ model Auto {
   vendedorCedula String
   marca        String
   modelo       String
-  año          Int
+  year         Int
   precio       Float
   kilometraje  Int
   color        String

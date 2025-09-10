@@ -12,7 +12,7 @@ export class CreateAutoDto {
 
   @IsNumber()
   @IsPositive()
-  año: number;
+  year: number;
 
   @IsNumber()
   @IsPositive()

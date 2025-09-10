@@ -23,7 +23,7 @@ router.post("/add", authMiddleware, upload.single("imagen"), async (req, res) =>
 });
 
 // Solo usuarios autenticados pueden ver sus autos
-router.get("/mis-autos/:cedula", authMiddleware, async (req, res) => {
+router.get("/mis-autos", authMiddleware, async (req, res) => {
   await autoController.findAutosByUsuario(req, res);
 });
 

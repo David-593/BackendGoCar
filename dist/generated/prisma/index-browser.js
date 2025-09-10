@@ -137,7 +137,7 @@ exports.Prisma.AutoScalarFieldEnum = {
   vendedorCedula: 'vendedorCedula',
   marca: 'marca',
   modelo: 'modelo',
-  año: 'año',
+  year: 'year',
   precio: 'precio',
   kilometraje: 'kilometraje',
   color: 'color',

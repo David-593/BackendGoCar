@@ -2130,14 +2130,14 @@ export namespace Prisma {
 
   export type AutoAvgAggregateOutputType = {
     id: number | null
-    año: number | null
+    year: number | null
     precio: number | null
     kilometraje: number | null
   }
 
   export type AutoSumAggregateOutputType = {
     id: number | null
-    año: number | null
+    year: number | null
     precio: number | null
     kilometraje: number | null
   }
@@ -2147,7 +2147,7 @@ export namespace Prisma {
     vendedorCedula: string | null
     marca: string | null
     modelo: string | null
-    año: number | null
+    year: number | null
     precio: number | null
     kilometraje: number | null
     color: string | null
@@ -2163,7 +2163,7 @@ export namespace Prisma {
     vendedorCedula: string | null
     marca: string | null
     modelo: string | null
-    año: number | null
+    year: number | null
     precio: number | null
     kilometraje: number | null
     color: string | null
@@ -2179,7 +2179,7 @@ export namespace Prisma {
     vendedorCedula: number
     marca: number
     modelo: number
-    año: number
+    year: number
     precio: number
     kilometraje: number
     color: number
@@ -2194,14 +2194,14 @@ export namespace Prisma {
 
   export type AutoAvgAggregateInputType = {
     id?: true
-    año?: true
+    year?: true
     precio?: true
     kilometraje?: true
   }
 
   export type AutoSumAggregateInputType = {
     id?: true
-    año?: true
+    year?: true
     precio?: true
     kilometraje?: true
   }
@@ -2211,7 +2211,7 @@ export namespace Prisma {
     vendedorCedula?: true
     marca?: true
     modelo?: true
-    año?: true
+    year?: true
     precio?: true
     kilometraje?: true
     color?: true
@@ -2227,7 +2227,7 @@ export namespace Prisma {
     vendedorCedula?: true
     marca?: true
     modelo?: true
-    año?: true
+    year?: true
     precio?: true
     kilometraje?: true
     color?: true
@@ -2243,7 +2243,7 @@ export namespace Prisma {
     vendedorCedula?: true
     marca?: true
     modelo?: true
-    año?: true
+    year?: true
     precio?: true
     kilometraje?: true
     color?: true
@@ -2346,7 +2346,7 @@ export namespace Prisma {
     vendedorCedula: string
     marca: string
     modelo: string
-    año: number
+    year: number
     precio: number
     kilometraje: number
     color: string
@@ -2381,7 +2381,7 @@ export namespace Prisma {
     vendedorCedula?: boolean
     marca?: boolean
     modelo?: boolean
-    año?: boolean
+    year?: boolean
     precio?: boolean
     kilometraje?: boolean
     color?: boolean
@@ -2398,7 +2398,7 @@ export namespace Prisma {
     vendedorCedula?: boolean
     marca?: boolean
     modelo?: boolean
-    año?: boolean
+    year?: boolean
     precio?: boolean
     kilometraje?: boolean
     color?: boolean
@@ -2415,7 +2415,7 @@ export namespace Prisma {
     vendedorCedula?: boolean
     marca?: boolean
     modelo?: boolean
-    año?: boolean
+    year?: boolean
     precio?: boolean
     kilometraje?: boolean
     color?: boolean
@@ -2432,7 +2432,7 @@ export namespace Prisma {
     vendedorCedula?: boolean
     marca?: boolean
     modelo?: boolean
-    año?: boolean
+    year?: boolean
     precio?: boolean
     kilometraje?: boolean
     color?: boolean
@@ -2443,7 +2443,7 @@ export namespace Prisma {
     fechaPublicacion?: boolean
   }
 
-  export type AutoOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "vendedorCedula" | "marca" | "modelo" | "año" | "precio" | "kilometraje" | "color" | "estado" | "descripcion" | "imagenUrl" | "contacto" | "fechaPublicacion", ExtArgs["result"]["auto"]>
+  export type AutoOmit<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = $Extensions.GetOmit<"id" | "vendedorCedula" | "marca" | "modelo" | "year" | "precio" | "kilometraje" | "color" | "estado" | "descripcion" | "imagenUrl" | "contacto" | "fechaPublicacion", ExtArgs["result"]["auto"]>
   export type AutoInclude<ExtArgs extends $Extensions.InternalArgs = $Extensions.DefaultArgs> = {
     vendedor?: boolean | UsuarioDefaultArgs<ExtArgs>
   }
@@ -2464,7 +2464,7 @@ export namespace Prisma {
       vendedorCedula: string
       marca: string
       modelo: string
-      año: number
+      year: number
       precio: number
       kilometraje: number
       color: string
@@ -2901,7 +2901,7 @@ export namespace Prisma {
     readonly vendedorCedula: FieldRef<"Auto", 'String'>
     readonly marca: FieldRef<"Auto", 'String'>
     readonly modelo: FieldRef<"Auto", 'String'>
-    readonly año: FieldRef<"Auto", 'Int'>
+    readonly year: FieldRef<"Auto", 'Int'>
     readonly precio: FieldRef<"Auto", 'Float'>
     readonly kilometraje: FieldRef<"Auto", 'Int'>
     readonly color: FieldRef<"Auto", 'String'>
@@ -3358,7 +3358,7 @@ export namespace Prisma {
     vendedorCedula: 'vendedorCedula',
     marca: 'marca',
     modelo: 'modelo',
-    año: 'año',
+    year: 'year',
     precio: 'precio',
     kilometraje: 'kilometraje',
     color: 'color',
@@ -3557,7 +3557,7 @@ export namespace Prisma {
     vendedorCedula?: StringFilter<"Auto"> | string
     marca?: StringFilter<"Auto"> | string
     modelo?: StringFilter<"Auto"> | string
-    año?: IntFilter<"Auto"> | number
+    year?: IntFilter<"Auto"> | number
     precio?: FloatFilter<"Auto"> | number
     kilometraje?: IntFilter<"Auto"> | number
     color?: StringFilter<"Auto"> | string
@@ -3574,7 +3574,7 @@ export namespace Prisma {
     vendedorCedula?: SortOrder
     marca?: SortOrder
     modelo?: SortOrder
-    año?: SortOrder
+    year?: SortOrder
     precio?: SortOrder
     kilometraje?: SortOrder
     color?: SortOrder
@@ -3594,7 +3594,7 @@ export namespace Prisma {
     vendedorCedula?: StringFilter<"Auto"> | string
     marca?: StringFilter<"Auto"> | string
     modelo?: StringFilter<"Auto"> | string
-    año?: IntFilter<"Auto"> | number
+    year?: IntFilter<"Auto"> | number
     precio?: FloatFilter<"Auto"> | number
     kilometraje?: IntFilter<"Auto"> | number
     color?: StringFilter<"Auto"> | string
@@ -3611,7 +3611,7 @@ export namespace Prisma {
     vendedorCedula?: SortOrder
     marca?: SortOrder
     modelo?: SortOrder
-    año?: SortOrder
+    year?: SortOrder
     precio?: SortOrder
     kilometraje?: SortOrder
     color?: SortOrder
@@ -3635,7 +3635,7 @@ export namespace Prisma {
     vendedorCedula?: StringWithAggregatesFilter<"Auto"> | string
     marca?: StringWithAggregatesFilter<"Auto"> | string
     modelo?: StringWithAggregatesFilter<"Auto"> | string
-    año?: IntWithAggregatesFilter<"Auto"> | number
+    year?: IntWithAggregatesFilter<"Auto"> | number
     precio?: FloatWithAggregatesFilter<"Auto"> | number
     kilometraje?: IntWithAggregatesFilter<"Auto"> | number
     color?: StringWithAggregatesFilter<"Auto"> | string
@@ -3737,7 +3737,7 @@ export namespace Prisma {
   export type AutoCreateInput = {
     marca: string
     modelo: string
-    año: number
+    year: number
     precio: number
     kilometraje: number
     color: string
@@ -3754,7 +3754,7 @@ export namespace Prisma {
     vendedorCedula: string
     marca: string
     modelo: string
-    año: number
+    year: number
     precio: number
     kilometraje: number
     color: string
@@ -3768,7 +3768,7 @@ export namespace Prisma {
   export type AutoUpdateInput = {
     marca?: StringFieldUpdateOperationsInput | string
     modelo?: StringFieldUpdateOperationsInput | string
-    año?: IntFieldUpdateOperationsInput | number
+    year?: IntFieldUpdateOperationsInput | number
     precio?: FloatFieldUpdateOperationsInput | number
     kilometraje?: IntFieldUpdateOperationsInput | number
     color?: StringFieldUpdateOperationsInput | string
@@ -3785,7 +3785,7 @@ export namespace Prisma {
     vendedorCedula?: StringFieldUpdateOperationsInput | string
     marca?: StringFieldUpdateOperationsInput | string
     modelo?: StringFieldUpdateOperationsInput | string
-    año?: IntFieldUpdateOperationsInput | number
+    year?: IntFieldUpdateOperationsInput | number
     precio?: FloatFieldUpdateOperationsInput | number
     kilometraje?: IntFieldUpdateOperationsInput | number
     color?: StringFieldUpdateOperationsInput | string
@@ -3801,7 +3801,7 @@ export namespace Prisma {
     vendedorCedula: string
     marca: string
     modelo: string
-    año: number
+    year: number
     precio: number
     kilometraje: number
     color: string
@@ -3815,7 +3815,7 @@ export namespace Prisma {
   export type AutoUpdateManyMutationInput = {
     marca?: StringFieldUpdateOperationsInput | string
     modelo?: StringFieldUpdateOperationsInput | string
-    año?: IntFieldUpdateOperationsInput | number
+    year?: IntFieldUpdateOperationsInput | number
     precio?: FloatFieldUpdateOperationsInput | number
     kilometraje?: IntFieldUpdateOperationsInput | number
     color?: StringFieldUpdateOperationsInput | string
@@ -3831,7 +3831,7 @@ export namespace Prisma {
     vendedorCedula?: StringFieldUpdateOperationsInput | string
     marca?: StringFieldUpdateOperationsInput | string
     modelo?: StringFieldUpdateOperationsInput | string
-    año?: IntFieldUpdateOperationsInput | number
+    year?: IntFieldUpdateOperationsInput | number
     precio?: FloatFieldUpdateOperationsInput | number
     kilometraje?: IntFieldUpdateOperationsInput | number
     color?: StringFieldUpdateOperationsInput | string
@@ -4023,7 +4023,7 @@ export namespace Prisma {
     vendedorCedula?: SortOrder
     marca?: SortOrder
     modelo?: SortOrder
-    año?: SortOrder
+    year?: SortOrder
     precio?: SortOrder
     kilometraje?: SortOrder
     color?: SortOrder
@@ -4036,7 +4036,7 @@ export namespace Prisma {
 
   export type AutoAvgOrderByAggregateInput = {
     id?: SortOrder
-    año?: SortOrder
+    year?: SortOrder
     precio?: SortOrder
     kilometraje?: SortOrder
   }
@@ -4046,7 +4046,7 @@ export namespace Prisma {
     vendedorCedula?: SortOrder
     marca?: SortOrder
     modelo?: SortOrder
-    año?: SortOrder
+    year?: SortOrder
     precio?: SortOrder
     kilometraje?: SortOrder
     color?: SortOrder
@@ -4062,7 +4062,7 @@ export namespace Prisma {
     vendedorCedula?: SortOrder
     marca?: SortOrder
     modelo?: SortOrder
-    año?: SortOrder
+    year?: SortOrder
     precio?: SortOrder
     kilometraje?: SortOrder
     color?: SortOrder
@@ -4075,7 +4075,7 @@ export namespace Prisma {
 
   export type AutoSumOrderByAggregateInput = {
     id?: SortOrder
-    año?: SortOrder
+    year?: SortOrder
     precio?: SortOrder
     kilometraje?: SortOrder
   }
@@ -4382,7 +4382,7 @@ export namespace Prisma {
   export type AutoCreateWithoutVendedorInput = {
     marca: string
     modelo: string
-    año: number
+    year: number
     precio: number
     kilometraje: number
     color: string
@@ -4397,7 +4397,7 @@ export namespace Prisma {
     id?: number
     marca: string
     modelo: string
-    año: number
+    year: number
     precio: number
     kilometraje: number
     color: string
@@ -4442,7 +4442,7 @@ export namespace Prisma {
     vendedorCedula?: StringFilter<"Auto"> | string
     marca?: StringFilter<"Auto"> | string
     modelo?: StringFilter<"Auto"> | string
-    año?: IntFilter<"Auto"> | number
+    year?: IntFilter<"Auto"> | number
     precio?: FloatFilter<"Auto"> | number
     kilometraje?: IntFilter<"Auto"> | number
     color?: StringFilter<"Auto"> | string
@@ -4521,7 +4521,7 @@ export namespace Prisma {
     id?: number
     marca: string
     modelo: string
-    año: number
+    year: number
     precio: number
     kilometraje: number
     color: string
@@ -4535,7 +4535,7 @@ export namespace Prisma {
   export type AutoUpdateWithoutVendedorInput = {
     marca?: StringFieldUpdateOperationsInput | string
     modelo?: StringFieldUpdateOperationsInput | string
-    año?: IntFieldUpdateOperationsInput | number
+    year?: IntFieldUpdateOperationsInput | number
     precio?: FloatFieldUpdateOperationsInput | number
     kilometraje?: IntFieldUpdateOperationsInput | number
     color?: StringFieldUpdateOperationsInput | string
@@ -4550,7 +4550,7 @@ export namespace Prisma {
     id?: IntFieldUpdateOperationsInput | number
     marca?: StringFieldUpdateOperationsInput | string
     modelo?: StringFieldUpdateOperationsInput | string
-    año?: IntFieldUpdateOperationsInput | number
+    year?: IntFieldUpdateOperationsInput | number
     precio?: FloatFieldUpdateOperationsInput | number
     kilometraje?: IntFieldUpdateOperationsInput | number
     color?: StringFieldUpdateOperationsInput | string
@@ -4565,7 +4565,7 @@ export namespace Prisma {
     id?: IntFieldUpdateOperationsInput | number
     marca?: StringFieldUpdateOperationsInput | string
     modelo?: StringFieldUpdateOperationsInput | string
-    año?: IntFieldUpdateOperationsInput | number
+    year?: IntFieldUpdateOperationsInput | number
     precio?: FloatFieldUpdateOperationsInput | number
     kilometraje?: IntFieldUpdateOperationsInput | number
     color?: StringFieldUpdateOperationsInput | string

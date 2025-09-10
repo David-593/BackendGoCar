@@ -8,9 +8,9 @@ class AutoService {
         const autoData = {
             marca: data.marca,
             modelo: data.modelo,
-            año: data.año,
-            precio: data.precio,
-            kilometraje: data.kilometraje,
+            year: Number(data.year),
+            precio: Number(data.precio),
+            kilometraje: Number(data.kilometraje),
             color: data.color,
             descripcion: data.descripcion,
             imagenUrl: data.imagenUrl,

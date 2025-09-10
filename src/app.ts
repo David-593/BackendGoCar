@@ -14,7 +14,10 @@ app.use(cors({
   credentials: true
 }));
 
+
 app.use(express.json());
+// Servir la carpeta uploads como recurso estático
+app.use('/uploads', express.static('uploads'));
 
 app.use("/api/users", authMiddleware, usuarioRoutes);
 app.use("/api/auto", autoRoutes);

@@ -21,7 +21,7 @@ const upload = (0, multer_1.default)({ storage: storage });
 router.post("/add", AuthMiddleware_1.authMiddleware, upload.single("imagen"), async (req, res) => {
     await autoController.addAuto(req, res);
 });
-router.get("/mis-autos/:cedula", AuthMiddleware_1.authMiddleware, async (req, res) => {
+router.get("/mis-autos", AuthMiddleware_1.authMiddleware, async (req, res) => {
     await autoController.findAutosByUsuario(req, res);
 });
 router.patch("/vender/:id", AuthMiddleware_1.authMiddleware, async (req, res) => {

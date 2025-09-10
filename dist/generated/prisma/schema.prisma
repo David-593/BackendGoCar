@@ -19,7 +19,7 @@ model Usuario {
   nombres   String
   apellidos String
   email     String   @unique
-  password  String   @unique
+  password  String
   rol       String   @default("user")
   telefono  String?
   redSocial String?
@@ -33,7 +33,7 @@ model Auto {
   vendedorCedula   String
   marca            String
   modelo           String
-  año             Int
+  year             Int
   precio           Float
   kilometraje      Int
   color            String
