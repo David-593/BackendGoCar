@@ -5,7 +5,8 @@
   "scripts": {
   "dev": "tsnd --respawn --clear -r tsconfig-paths/register src/server.ts",
     "build": "rimraf ./dist && tsc",
-  "start": "npm run build && node dist/server.js",
+  "postbuild": "xcopy /E /I /Y src\\generated dist\\generated",
+  "start": "npm run build && npm run postbuild && node dist/server.js",
     "test": "jest"
   },
   "keywords": [],
