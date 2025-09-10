@@ -1,4 +1,4 @@
-import { IsString, IsNumber, IsPositive, IsUrl } from 'class-validator';
+import { IsString, IsNumber, IsPositive } from 'class-validator';
 
 export class CreateAutoDto {
   @IsString()
@@ -28,8 +28,10 @@ export class CreateAutoDto {
   @IsString()
   descripcion: string;
 
-  @IsUrl()
+  @IsString()
   imagenUrl: string;
+  @IsString()
+  estado?: string; // DISPONIBLE o VENDIDO
 
   @IsString()
   contacto: string;

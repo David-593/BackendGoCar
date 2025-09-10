@@ -1,6 +1,7 @@
 import express from "express";
 import cors from "cors"; 
 import usuarioRoutes from "./routes/routeUsuario/UsuarioRoute";
+import autoRoutes from "./routes/routeAuto/AutoRoute";
 import { authMiddleware } from "./middleware/AuthMiddleware";
 import authRoute from "./routes/routeAuth/AuthRoute";
 import adminRoute from "./routes/routeAdmin/AdminRoute";
@@ -16,6 +17,7 @@ app.use(cors({
 app.use(express.json());
 
 app.use("/api/users", authMiddleware, usuarioRoutes);
+app.use("/api/auto", autoRoutes);
 app.use("/api/auth", authRoute);
 app.use("/api/admin", authMiddleware, adminRoute);
 
