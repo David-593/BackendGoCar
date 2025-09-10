@@ -4,10 +4,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthUserService = void 0;
-const prisma_1 = require("@generated/prisma");
+const client_1 = require("../../generated/prisma/client");
 const bcrypt_1 = __importDefault(require("bcrypt"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
-const prisma = new prisma_1.PrismaClient();
+const prisma = new client_1.PrismaClient();
 class AuthUserService {
     async register(createUserDto) {
         const { cedula, nombres, apellidos, email, password, telefono, redSocial } = createUserDto;

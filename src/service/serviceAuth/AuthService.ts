@@ -1,4 +1,4 @@
-import { PrismaClient } from '@generated/prisma';
+import { PrismaClient } from '../../generated/prisma/client';
 import bcrypt from 'bcrypt';
 import { AuthLoginDto } from 'dto/dtoAuth/AuthDto';
 import { CreateUserDto } from 'dto/dtoUsuario/UsuarioDto';

@@ -21,6 +21,8 @@ app.use("/api/auto", autoRoutes);
 app.use("/api/auth", authRoute);
 app.use("/api/admin", authMiddleware, adminRoute);
 
-app.listen(port, () => {
-  console.log(`Server on port ${port}`);
-});
+// app.listen(port, () => {
+//   console.log(`Server on port ${port}`);
+// });
+
+export default app;

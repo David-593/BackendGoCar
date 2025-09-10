@@ -8,5 +8,6 @@ export declare class CreateAutoDto {
     color: string;
     descripcion: string;
     imagenUrl: string;
+    estado?: string;
     contacto: string;
 }

@@ -50,9 +50,13 @@ __decorate([
     __metadata("design:type", String)
 ], CreateAutoDto.prototype, "descripcion", void 0);
 __decorate([
-    (0, class_validator_1.IsUrl)(),
+    (0, class_validator_1.IsString)(),
     __metadata("design:type", String)
 ], CreateAutoDto.prototype, "imagenUrl", void 0);
+__decorate([
+    (0, class_validator_1.IsString)(),
+    __metadata("design:type", String)
+], CreateAutoDto.prototype, "estado", void 0);
 __decorate([
     (0, class_validator_1.IsString)(),
     __metadata("design:type", String)

@@ -1,5 +1,5 @@
 import { Request, Response } from "express";
-import { AdminService } from "service/serviceAdmin/AdminService";
+import { AdminService } from "../../service/serviceAdmin/AdminService";
 
 const adminService = new AdminService();
 export class AdminController {

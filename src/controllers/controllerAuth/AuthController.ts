@@ -1,6 +1,6 @@
 import { AuthLoginDto } from "dto/dtoAuth/AuthDto";
 import { Request, Response } from "express";
-import { AuthUserService } from "service/serviceAuth/AuthService";
+import { AuthUserService } from "../../service/serviceAuth/AuthService";
 
 const authService = new AuthUserService();
 

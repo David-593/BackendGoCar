@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AuthController = void 0;
-const AuthService_1 = require("service/serviceAuth/AuthService");
+const AuthService_1 = require("../../service/serviceAuth/AuthService");
 const authService = new AuthService_1.AuthUserService();
 class AuthController {
     async register(req, res) {

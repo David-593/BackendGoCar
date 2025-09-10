@@ -1,4 +1,4 @@
-import { PrismaClient } from "@generated/prisma";
+import { PrismaClient } from '../../generated/prisma/client';
 import bcrypt from "bcrypt";
 import { createUserDtoByAdmin } from "dto/dtoAdmin/AdminDto";
 

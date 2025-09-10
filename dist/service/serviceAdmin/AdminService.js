@@ -4,9 +4,9 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AdminService = void 0;
-const prisma_1 = require("@generated/prisma");
+const client_1 = require("../../generated/prisma/client");
 const bcrypt_1 = __importDefault(require("bcrypt"));
-const prisma = new prisma_1.PrismaClient();
+const prisma = new client_1.PrismaClient();
 class AdminService {
     async register(createUserDtoByAdmin) {
         const { cedula, nombres, apellidos, email, password, telefono, rol, redSocial } = createUserDtoByAdmin;

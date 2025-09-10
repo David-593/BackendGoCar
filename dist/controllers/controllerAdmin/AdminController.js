@@ -1,7 +1,7 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.AdminController = void 0;
-const AdminService_1 = require("service/serviceAdmin/AdminService");
+const AdminService_1 = require("../../service/serviceAdmin/AdminService");
 const adminService = new AdminService_1.AdminService();
 class AdminController {
     async register(req, res) {
