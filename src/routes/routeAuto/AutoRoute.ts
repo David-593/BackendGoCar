@@ -4,7 +4,17 @@ import multer from "multer";
 import { authMiddleware } from "../../middleware/AuthMiddleware";
 
 const router = Router();
+// Ruta para obtener auto por id
+router.get('/:id', async (req, res) => {
+  await autoController.getAutoById(req, res);
+});
+
 const autoController = new AutoController();
+
+// Ruta para obtener todos los autos
+router.get('/', async (req, res) => {
+  await autoController.getAllAutos(req, res);
+});
 
 // Configuración de multer para guardar imágenes en la carpeta uploads
 const storage = multer.diskStorage({

@@ -1,9 +1,19 @@
-import { PrismaClient } from '../../generated/prisma/client';
-import { CreateAutoDto } from '../../dto/dtoAuto/AutoDto';
+	import { PrismaClient } from '../../generated/prisma/client';
+	import { CreateAutoDto } from '../../dto/dtoAuto/AutoDto';
 
-const prisma = new PrismaClient();
+	const prisma = new PrismaClient();
 
-export class AutoService {
+	export class AutoService {
+	// Obtener todos los autos
+	async getAllAutos(): Promise<any[]> {
+		return await prisma.auto.findMany();
+	}
+	// Obtener auto por id
+	async getAutoById(id: number): Promise<any> {
+		return await prisma.auto.findUnique({
+			where: { id }
+		});
+	}
 	// Agregar un auto
 			async addAuto(data: CreateAutoDto): Promise<any> {
 				// Si no se envía estado, usar DISPONIBLE por defecto

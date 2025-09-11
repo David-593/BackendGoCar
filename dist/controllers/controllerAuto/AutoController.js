@@ -4,6 +4,28 @@ exports.AutoController = void 0;
 const AutoService_1 = require("../../service/serviceAuto/AutoService");
 const autoService = new AutoService_1.AutoService();
 class AutoController {
+    async getAllAutos(req, res) {
+        try {
+            const autos = await autoService.getAllAutos();
+            res.json(autos);
+        }
+        catch (error) {
+            res.status(400).json({ message: error.message });
+        }
+    }
+    async getAutoById(req, res) {
+        try {
+            const { id } = req.params;
+            const auto = await autoService.getAutoById(Number(id));
+            if (!auto) {
+                return res.status(404).json({ message: 'Auto no encontrado' });
+            }
+            res.json(auto);
+        }
+        catch (error) {
+            res.status(400).json({ message: error.message });
+        }
+    }
     async addAuto(req, res) {
         try {
             const data = req.body;

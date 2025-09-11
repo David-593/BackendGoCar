@@ -8,7 +8,13 @@ const AutoController_1 = require("../../controllers/controllerAuto/AutoControlle
 const multer_1 = __importDefault(require("multer"));
 const AuthMiddleware_1 = require("../../middleware/AuthMiddleware");
 const router = (0, express_1.Router)();
+router.get('/:id', async (req, res) => {
+    await autoController.getAutoById(req, res);
+});
 const autoController = new AutoController_1.AutoController();
+router.get('/', async (req, res) => {
+    await autoController.getAllAutos(req, res);
+});
 const storage = multer_1.default.diskStorage({
     destination: function (req, file, cb) {
         cb(null, "uploads/");

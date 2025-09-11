@@ -1,3 +1,4 @@
+	// ...existing code...
 import { Request, Response } from 'express';
 import { AutoService } from '../../service/serviceAuto/AutoService';
 import { CreateAutoDto } from '../../dto/dtoAuto/AutoDto';
@@ -5,6 +6,28 @@ import { CreateAutoDto } from '../../dto/dtoAuto/AutoDto';
 const autoService = new AutoService();
 
 export class AutoController {
+	// Obtener todos los autos
+	async getAllAutos(req: Request, res: Response) {
+		try {
+			const autos = await autoService.getAllAutos();
+			res.json(autos);
+		} catch (error: any) {
+			res.status(400).json({ message: error.message });
+		}
+	}
+	// Obtener auto por id
+	async getAutoById(req: Request, res: Response) {
+		try {
+			const { id } = req.params;
+			const auto = await autoService.getAutoById(Number(id));
+			if (!auto) {
+				return res.status(404).json({ message: 'Auto no encontrado' });
+			}
+			res.json(auto);
+		} catch (error: any) {
+			res.status(400).json({ message: error.message });
+		}
+	}
 	// Agregar auto
 	async addAuto(req: Request, res: Response) {
 		try {

@@ -4,6 +4,14 @@ exports.AutoService = void 0;
 const client_1 = require("../../generated/prisma/client");
 const prisma = new client_1.PrismaClient();
 class AutoService {
+    async getAllAutos() {
+        return await prisma.auto.findMany();
+    }
+    async getAutoById(id) {
+        return await prisma.auto.findUnique({
+            where: { id }
+        });
+    }
     async addAuto(data) {
         const autoData = {
             marca: data.marca,
