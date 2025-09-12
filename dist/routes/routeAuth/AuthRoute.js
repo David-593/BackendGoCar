@@ -5,6 +5,8 @@ const express_1 = require("express");
 const router = (0, express_1.Router)();
 const authController = new AuthController_1.AuthController();
 router.post("/register", (req, res) => authController.register(req, res));
-router.post("/login", (req, res) => authController.login(req, res));
+router.post("/login", async (req, res) => {
+    await authController.login(req, res);
+});
 exports.default = router;
 //# sourceMappingURL=AuthRoute.js.map

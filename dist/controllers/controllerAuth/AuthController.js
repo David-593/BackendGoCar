@@ -25,6 +25,9 @@ class AuthController {
     async login(req, res) {
         try {
             const authDto = req.body;
+            if (!authDto.email || !authDto.password) {
+                return res.status(400).json({ message: "Email y contraseña son requeridos" });
+            }
             const result = await authService.login(authDto);
             res.status(200).json({ message: "Login exitoso", ...result });
         }
